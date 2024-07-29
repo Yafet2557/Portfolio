@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/3db68fd995.js" crossorigin="anonymous"></script>
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- Main Home -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars" onclick="openMenu()"></i>
+          <i class="fas fa-times" onclick="closeMenu()"></i>
+        </div>
+        <ul id="sideMenu">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <h1>Hi, I'm <span>Yafet Tekleab</span><br>A Software Engineering Student</h1>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    function openMenu() {
+      document.getElementById('sideMenu').classList.add('open');
+      document.querySelector('.menu-toggle .fa-bars').style.display = 'none';
+      document.querySelector('.menu-toggle .fa-times').style.display = 'block';
+    }
+
+    function closeMenu() {
+      document.getElementById('sideMenu').classList.remove('open');
+      document.querySelector('.menu-toggle .fa-bars').style.display = 'block';
+      document.querySelector('.menu-toggle .fa-times').style.display = 'none';
+    }
+  </script>
+
+  <!-- ABOUT ME -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/profilepic2.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About me</h1>
+          <p class="">Second Year Software Engineering Technology Co-op student excited to start my professional journey. With a
+            strong foundation in object-oriented design, web technologies, and data structures, I'm eager to take on new
+            challenges and grow!</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('community')">Work</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Programming Proficiency:</span><br>Proficient in C/C++, C#, Java, Python, JavaScript, HTML, CSS.
+              </li>
+              <li><span>Frameworks:</span><br>.NET Framework, ASP.NET, Entity Framework Core, Django, Flask, React, WPF.
+              </li>
+              <li><span>Software:</span><br>MySQL, Git, Bootstrap, jQuery, Rider.</li>
+              <li><span>Problem Solving:</span><br>Ability to analyze and solve complex issues efficiently and make the
+                right decisions.</li>
+              <li><span>Team Collaboration:</span><br>Strong communicator allowing for effective teamwork to achieve
+                project goals.</li>
+              <li><span>Adaptability:</span><br>Quick learner and adapts to new technologies very quickly.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Software Engineering Technology:</span><br>Advanced Diploma in Software Engineering Technology,
+                Conestoga College, Expected Graduation: Spring 2026.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="community">
+            <ul>
+              <li><span>Meat/Seafood Clerk, Zehrs:</span><br>Provided excellent customer service in a team environment,
+                including stock maintenance, and responding to customer needs. Ensured accurate product scanning and
+                assisted with inventory management and ordering. Maintained department cleanliness and adherence to
+                health and safety standards.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- EXPERIENCE -->
+  <div id="experience">
+    <div class="container">
+      <h1 class="sub-title">Experience</h1>
+      <div class="experience-list">
+        <div class="experienceBox">
+          <i class="fas fa-code fa-bounce"></i>
+          <h2>Programming</h2>
+          <p><b>Backend:</b> C#, C++, Java, Python, ASP.NET, Django, Flask</p>
+          <br>
+          <p><b>Frontend:</b> JavaScript, HTML, CSS, React, Bootstrap, jQuery</p>
+          <br>
+          <p><b>Database:</b> MySQL, Entity Framework Core</p>
+        </div>
+        <div class="experienceBox">
+          <i class="fa-solid fa-code-branch fa-bounce"></i>
+          <h2>Version Control</h2>
+          <p>Skillfully employed key version control and collaboration tools such as <b>Git</b> and <b>GitHub</b>.</p>
+        </div>
+        <div class="experienceBox">
+          <i class="fa-solid fa-microchip fa-bounce"></i>
+          <h2>Database Management</h2>
+          <p>Experience with <b>MySQL</b>, utilizing <b>Entity Framework</b> for efficient CRUD operations.</p>
+        </div>
+        <div class="experienceBox">
+          <i class="fa-solid fa-arrows-spin fa-bounce"></i>
+          <h2>SDLC</h2>
+          <p>Familiar with <b>Agile</b>, <b>Scrum</b>, and <b>Waterfall</b> models. Committed to the principles of
+            <b>SOLID</b> in software engineering.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div id="projects">
+    <div class="container">
+      <h1 class="sub-title">Projects</h1>
+      <div class="projects-list">
+        <div class="project" onclick="openModal('eventPlannerModal')">
+          <img src="images/chat-system/server_src_code.png">
+          <div class="layer">
+            <h3>Chat System</h3>
+            <p>Chat System Using c, Developed in Linux</p>
+            <i class="fa-solid fa-hand-pointer"></i>
+          </div>
+        </div>
+
+        <div class="modal" id="eventPlannerModal">
+          <i class="fas fa-times" onclick="closeModal('eventPlannerModal')"></i>
+          <div id="slider">
+            <figure>
+              <img src="images/chat-system/chat_server.png">
+              <img src="images/chat-system/client_1.png">
+              <img src="images/chat-system/clients_convo.png">
+              <img src="images/chat-system/server_src_code.png">
+              <img src="images/chat-system/src_code.png">
+
+            </figure>
+          </div>
+          <h1>Linux Chat System</h1>
+          <p>A client-server chat system developed in C for Linux environments. This application features a
+            terminal-based user interface using the ncurses library. It allows users to connect to a server, send and
+            receive messages in real-time, and handle long messages by breaking them into smaller chunks. The system
+            includes robust error handling, dynamic message display, and efficient resource management to ensure a
+            seamless chat experience.</p>
+          <p><strong>Key Features:</strong></p>
+          <ul>
+            <li>Real-time messaging with support for long message handling.</li>
+            <li>Terminal-based user interface with color-coded message displays.</li>
+            <li>Multi-threaded architecture for concurrent message sending and receiving.</li>
+            <li>Robust error handling and resource management for reliable operation.</li>
+          </ul>
+        </div>
+
+        <div class="project" onclick="openModal('tmsModal')">
+          <img src="images/tms/2.png">
+          <div class="layer">
+            <h3>TMS - Transportation Management System</h3>
+            <p>Logistic Shipment Software</p>
+            <i class="fa-solid fa-hand-pointer"></i>
+          </div>
+        </div>
+        <div class="modal" id="tmsModal">
+          <i class="fas fa-times" onclick="closeModal('tmsModal')"></i>
+          <div id="slider">
+            <figure>
+              <img src="images/tms/2.png" />
+              <img src="images/tms/3.png" />
+              <img src="images/tms/4.png" />
+              <img src="images/tms/5.png" />
+              <img src="images/tms/6.png" />
+            </figure>
+          </div>
+          <h1>Transportation Management System</h1>
+          <p>Designed a Transportation Management System for efficient cargo handling via truck or train. Applied MVVM
+            design pattern, led MySQL database development, and ensured seamless communication with external services.
+          </p>
+        </div>
+        <div class="project" onclick="openModal('textEditorModal')">
+          <img src="images/tcp-server/1.png">
+          <div class="layer">
+            <h3>TCP Server</h3>
+            <p>Multi-threaded client-server application</p>
+            <i class="fa-solid fa-hand-pointer"></i>
+          </div>
+        </div>
+        <div class="modal" id="textEditorModal">
+          <i class="fas fa-times" onclick="closeModal('textEditorModal')"></i>
+          <div id="slider">
+            <figure>
+              <img src="images/tcp-server/1.png" />
+              <img src="images/tcp-server/2.png" />
+              <img src="images/tcp-server/3.png" />
+              <img src="images/tcp-server/4.png" />
+              <img src="images/tcp-server/5.png" />
+            </figure>
+          </div>
+          <h1>TCP Server .NET</h1>
+          <p>This project taught me a lot about how the internet works and how everything is connected. Me and my
+            partner created a multi-threaded TCP server that accepts connections from both private and public networks,
+            letting users play a word-guessing game. After guessing all the words, the server asks if the player wants
+            to play again or end the game. It also logs details and errors to a file if it’s set up to run without a
+            console. I even made a version of the server that runs as a Windows Service, so it can start automatically
+            when the computer boots up.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CONTACT -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>Yafettekleab04@icloud.com</p>
+          <p><i class="fa-solid fa-phone"></i>(226) 600-2177</p>
+          <div class="social-icons">
+            <a href="http://www.linkedin.com/in/yafet-tekleab" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Yafet2557" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-left">
+          <p>All rights reserved &copy; 2024 - Yafet Tekleab</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript for Toggle Menu -->
+  <script>
+    var sideMenu = document.getElementById("sideMenu");
+    function openMenu() {
+      sideMenu.style.right = "0";
+    }
+    function closeMenu() {
+      sideMenu.style.right = "-200px";
+    }
+    var tabLinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+    function opentab(tabName) {
+      for (tabLink of tabLinks) {
+        tabLink.classList.remove("active-link");
+      }
+      for (tabContent of tabContents) {
+        tabContent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabName).classList.add("active-tab");
+    }
+    var modals = document.getElementsByClassName("modal");
+    var modalTriggers = document.getElementsByClassName("project");
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
